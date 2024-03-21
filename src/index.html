@@ -11,6 +11,45 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      #checkout {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .header--text {
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .checkout--name {
+        color: #fa4a0c;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+
+      .checkout--heading {
+        color: #252b42;
+        font-size: 40px;
+        margin-bottom: 30px;
+        font-weight: 700;
+      }
+
+      .checkout--desc {
+        color: #737373;
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      .img--checkout {
+        width: 650px;
+        height: 981px;
+      }
+    </style>
   </head>
   <body class="bg-gray-50">
     <div class="min-h-[100vh] bg-white mx-auto max-w-lg">
@@ -108,7 +147,28 @@
         id="checkout"
         class="bg-gray-50 min-h-[20rem] flex justify-center items-center"
       >
-        <h1>Checkout</h1>
+        <div class="container mx-auto flex flex-col items-center">
+          <div class="header--text text-center mb-8">
+            <p class="checkout--name text-lg font-semibold text-gray-700">
+              Checkout
+            </p>
+            <h1
+              class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+            >
+              When you <br class="hidden md:inline" />
+              done check
+              <br class="hidden md:inline" />
+              out and get it <br class="hidden md:inline" />
+              delivered.
+            </h1>
+            <p class="checkout--desc text-base text-gray-600">
+              When you done <br class="hidden md:inline" />
+              check out and get it <br class="hidden md:inline" />delivered with
+              ease.
+            </p>
+          </div>
+          <img src="assets/images/checkout.png" alt="" class="img--checkout" />
+        </div>
       </section>
 
       <!-- footer -->
