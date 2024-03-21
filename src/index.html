@@ -59,7 +59,43 @@
         height: 981px;
       }
     </style>
+    <style>
+      #explore {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .header--text {
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        padding: 20px;
+        flex: 1;
+      }
+
+      .explore--name {
+        color: #fa4a0c;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+
+      .explore--heading {
+        color: #252b42;
+        font-size: 40px;
+        margin-bottom: 30px;
+        font-weight: 700;
+      }
+
+      .explore--desc {
+        color: #737373;
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-weight: 500;
+      }
+    </style>
   </head>
+
   <body class="bg-gray-50">
     <div class="min-h-[100vh] bg-white mx-auto max-w-lg">
       <!-- navbar -->
@@ -145,11 +181,31 @@
         </div>
       </section>
 
-      <section
-        id="explore"
-        class="bg-gray-100 min-h-[20rem] flex justify-center items-center"
-      >
-        <h1>Explore</h1>
+      <section id="explore" class="bg-gray-100 py-8">
+        <div class="container mx-auto flex flex-col items-center">
+          <div class="header--text text-center mb-8">
+            <p class="explore--name text-lg font-semibold text-gray-700">
+              Explore varieties
+            </p>
+            <h1
+              class="explore--heading text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+            >
+              Shop for your <br class="hidden md:inline" />
+              favorites meal <br class="hidden md:inline" />
+              as e dey hot.
+            </h1>
+            <p class="explore--desc text-base text-gray-600">
+              Shop for your <br class="hidden md:inline" />favorite meals or
+              <br class="hidden md:inline" />drinks and enjoy
+              <br class="hidden md:inline" />while doing it.
+            </p>
+          </div>
+          <img
+            src="./assets/images/Rectangle_1.png"
+            class="w-[650px] h-[581px] object-cover mt-5"
+            alt=""
+          />
+        </div>
       </section>
 
       <section
