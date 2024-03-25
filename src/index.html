@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -20,38 +21,102 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- Font Monserrat -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-  </head>
-  <body class="bg-gray-50">
-    <div class="min-h-[100vh] bg-white mx-auto">
-      <!-- navbar -->
-      <nav class="bg-white">
-        <div class="flex justify-between items-center p-6 lg:p-3 lg:mx-10">
-          <div class="w-[104px] lg:w-[200px]">
-            <img
-              src="./assets/images/logo.png"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <div class="hidden md:block">
-            <ul class="flex gap-10 lg:gap-24 font-semibold">
-              <li class="nav-item active:text-primary">
-                <a href="#home">Home</a>
-              </li>
-              <li class="nav-item active:text-primary">
-                <a href="#product">Product</a>
-              </li>
-              <li class="nav-item active:text-primary">
-                <a href="#faq">FAQ</a>
-              </li>
-              <li class="nav-item active:text-primary">
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-          <div class="toggler md:hidden">
-            <button type="button">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        #checkout {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .header--text {
+            font-family: "Montserrat", sans-serif;
+            text-align: center;
+            justify-content: center;
+        }
+        
+        .checkout--name {
+            color: #fa4a0c;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        
+        .checkout--heading {
+            color: #252b42;
+            font-size: 40px;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        
+        .checkout--desc {
+            color: #737373;
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: 500;
+        }
+        
+        .img--checkout {
+            width: 650px;
+            height: 981px;
+        }
+        /* explore */
+        
+        #explore {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .header--text {
+            font-family: "Montserrat", sans-serif;
+            text-align: center;
+            padding: 20px;
+            flex: 1;
+        }
+        
+        .explore--name,
+        .explore--heading,
+        .explore--desc {
+            padding-left: 0;
+        }
+        
+        .img--explore {
+            width: 350px;
+            height: 525px;
+            margin-left: 0;
+        }
+        
+        @media (min-width: 900px) {
+            #explore {
+                flex-direction: row;
+                justify-content: center;
+            }
+            .header--text {
+                text-align: left;
+            }
+            .explore--name,
+            .explore--heading,
+            .explore--desc {
+                padding-left: 100px;
+            }
+            .img--explore {
+                margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <div class="bg-white mx-auto">
+        <!-- navbar -->
+        <nav class="bg-white">
+            <div class="flex justify-between items-center p-6">
+                <div class="w-[104px]">
+                    <img src="./assets/images/logo.png" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                    <button type="button">
               <img
                 src="./assets/images/menu.svg"
                 class="w-[20px] h-[20px] object-cover"
@@ -96,32 +161,22 @@
       </nav>
       <!-- /navbar -->
 
-      <!-- hero -->
-      <section
-        id="hero"
-        class="bg-gray-50 min-h-[20rem] flex justify-center items-center"
-      >
-        <div class="container mx-auto px-4 py-8">
-          <div class="max-w-md mx-auto text-center">
-            <h2 class="font-bold mt-3 mb-3 text-gray-500">Food App</h2>
-            <h1 class="text-5xl font-bold mb-8 text-gray-800">
-              Why stay hungry <br />
-              when you can order <br />
-              from Bella Onoje
-            </h1>
-            <p class="text-2xl mb-8 text-gray-500">
-              Download the bella onoje's <br />
-              food app now on
-            </p>
-            <div class="flex flex-col items-center space-y-4 mb-8">
-              <button
-                class="bg-primary text-xl text-white font-bold py-2 px-4 rounded-full h-14 w-48"
-              >
+        <!-- hero -->
+        <section id="hero" class="bg-gray-50 min-h-[20rem] flex justify-center items-center">
+            <div class="container mx-auto px-4 py-8">
+                <div class="max-w-md mx-auto text-center">
+                    <h2 class="font-bold mt-3 mb-3 text-gray-500">Food App</h2>
+                    <h1 class="text-5xl font-bold mb-8 text-gray-800">
+                        Why stay hungry <br /> when you can order <br /> from Bella Onoje
+                    </h1>
+                    <p class="text-2xl mb-8 text-gray-500">
+                        Download the bella onoje's <br /> food app now on
+                    </p>
+                    <div class="flex flex-col items-center space-y-4 mb-8">
+                        <button class="bg-primary text-xl text-white font-bold py-2 px-4 rounded-full h-14 w-48">
                 Playstore
               </button>
-              <button
-                class="bg-transparent text-xl text-primary font-bold py-2 px-4 border border-primary rounded-full h-14 w-48"
-              >
+                        <button class="bg-transparent text-xl text-primary font-bold py-2 px-4 border border-primary rounded-full h-14 w-48">
                 App store
               </button>
             </div>
@@ -153,32 +208,18 @@
       </section>
       <!-- /Account -->
 
-      <section id="explore" class="bg-gray-100 py-8">
-        <div class="container mx-auto flex flex-col items-center">
-          <div class="header--text text-center mb-8">
-            <p class="explore--name text-lg font-semibold text-gray-700">
-              Explore varieties
-            </p>
-            <h1
-              class="explore--heading text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
-            >
-              Shop for your <br class="hidden md:inline" />
-              favorites meal <br class="hidden md:inline" />
-              as e dey hot.
-            </h1>
-            <p class="explore--desc text-base text-gray-600">
-              Shop for your <br class="hidden md:inline" />favorite meals or
-              <br class="hidden md:inline" />drinks and enjoy
-              <br class="hidden md:inline" />while doing it.
-            </p>
-          </div>
-          <img
-            src="./assets/images/Rectangle_1.png"
-            class="object-cover mt-5"
-            alt=""
-          />
-        </div>
-      </section>
+        <section id="explore" class="flex items-center">
+            <div class="header--text w-full md:w-1/2">
+                <p class="explore--name text-orange-500 text-3xl font-bold">Explore varieties</p>
+                <h1 class="explore--heading text-gray-800 text-5xl font-bold mb-4">
+                    Shop for your favorites <br class="md:hidden" /> meal as e dey hot.
+                </h1>
+                <p class="explore--desc text-gray-600 text-lg font-medium">
+                    Shop for your favorite meals or drinks <br class="md:hidden" /> and enjoy while doing it.
+                </p>
+            </div>
+            <img src="./assets/images/Rectangle_1.png" alt="img explore" class="img--explore" />
+        </section>
 
           <!-- Account -->
             <section id="checkout" class="bg-white my-5">
@@ -295,5 +336,6 @@
       }
     </script>
     <script src="./app.js"></script>
-  </body>
+</body>
+
 </html>
