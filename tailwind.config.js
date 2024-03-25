@@ -11,6 +11,7 @@ module.exports = {
       },
       fontFamily: {
         montserrat: ["Montserrat"],
+        roboto: ["Roboto"],
       },
     },
   },
