@@ -108,58 +108,77 @@
 </head>
 
 <body class="bg-gray-50">
-    <div class="bg-white mx-auto">
-        <!-- navbar -->
-        <nav class="bg-white">
-            <div class="flex justify-between items-center p-6">
-                <div class="w-[104px]">
-                    <img src="./assets/images/logo.png" class="w-full h-full object-cover" />
-                </div>
-                <div>
-                    <button type="button">
-              <img
-                src="./assets/images/menu.svg"
-                class="w-[20px] h-[20px] object-cover"
-              />
-            </button>
-          </div>
-          <aside
-            id="offcanvas"
-            class="fixed inset-y-0 right-0 bg-[#FFF] w-80 p-4 z-10 hidden lg:hidden"
-          >
-            <nav>
-              <div
-                class="flex justify-between items-center mb-4 p-4 border-b-2 border-gray-300"
-              >
-                <div class="w-[100px]">
-                  <img
-                    src="./assets/images/logo.png"
-                    class="object-cover w-full h-full"
-                  />
-                </div>
-                <div class="leading-none toggler">
-                  <button type="button" class="text-gray-500">
-                    <i data-feather="x-circle"></i>
-                  </button>
-                </div>
-              </div>
-              <ul
-                class="flex flex-col justify-center items-start gap-8 text-sm mt-8"
-              >
-                <li class="nav-item"><a href="#home">Home</a></li>
-                <li class="nav-item"><a href="#product">Product</a></li>
-                <li class="nav-item"><a href="#faq">FAQ</a></li>
-                <li class="nav-item"><a href="#contact">Contact</a></li>
-              </ul>
-            </nav>
-          </aside>
-          <div
-            id="overlay"
-            class="fixed inset-0 bg-black opacity-40 hidden lg:hidden"
-          ></div>
+  <div class="min-h-[100vh] bg-white mx-auto">
+    <!-- navbar -->
+    <nav class="bg-white">
+      <div class="flex justify-between items-center p-6 lg:p-3 lg:mx-10">
+        <div class="w-[104px] lg:w-[200px]">
+          <img
+            src="./assets/images/logo.png"
+            class="w-full h-full object-cover"
+          />
         </div>
-      </nav>
-      <!-- /navbar -->
+        <div class="hidden md:block">
+          <ul class="flex gap-10 lg:gap-24 font-semibold">
+            <li class="nav-item active:text-primary">
+              <a href="#home">Home</a>
+            </li>
+            <li class="nav-item active:text-primary">
+              <a href="#product">Product</a>
+            </li>
+            <li class="nav-item active:text-primary">
+              <a href="#faq">FAQ</a>
+            </li>
+            <li class="nav-item active:text-primary">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="toggler md:hidden">
+          <button type="button">
+            <img
+              src="./assets/images/menu.svg"
+              class="w-[20px] h-[20px] object-cover"
+            />
+          </button>
+        </div>
+        <aside
+          id="offcanvas"
+          class="fixed inset-y-0 right-0 bg-[#FFF] w-80 p-4 z-10 hidden lg:hidden"
+        >
+          <nav>
+            <div
+              class="flex justify-between items-center mb-4 p-4 border-b-2 border-gray-300"
+            >
+              <div class="w-[100px]">
+                <img
+                  src="./assets/images/logo.png"
+                  class="object-cover w-full h-full"
+                />
+              </div>
+              <div class="leading-none toggler">
+                <button type="button" class="text-gray-500">
+                  <i data-feather="x-circle"></i>
+                </button>
+              </div>
+            </div>
+            <ul
+              class="flex flex-col justify-center items-start gap-8 text-sm mt-8"
+            >
+              <li class="nav-item"><a href="#home">Home</a></li>
+              <li class="nav-item"><a href="#product">Product</a></li>
+              <li class="nav-item"><a href="#faq">FAQ</a></li>
+              <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </aside>
+        <div
+          id="overlay"
+          class="fixed inset-0 bg-black opacity-40 hidden lg:hidden"
+        ></div>
+      </div>
+    </nav>
+    <!-- /navbar -->
 
         <!-- hero -->
         <section id="hero" class="bg-gray-50 min-h-[20rem] flex justify-center items-center">
@@ -199,7 +218,7 @@
         <div class="lg:w-2/3 max-w-lg mb-10">
           <h1 class="text-orange-500 text-lg font-bold md:text-justify text-center">Create an account</h1>
           <h1 class="font-bold text-4xl md:text-justify text-center mt-5">Create/login to an existing account to get started</h1>
-          <h4 class="font-medium md:text-justify text-center mt-5">Shop for your favorite meals or drinks and enjoy while doing it.</h4>
+          <h4 class="font-medium md:text-justify text-gray-600  text-center mt-5">Shop for your favorite meals or drinks and enjoy while doing it.</h4>
         </div>
         <div class="lg:w-1/3 max-xl:px-20 object-cover">
           <img src="./assets/images/Rectangle.png" class="mt-0 object-cover" alt="">
@@ -208,27 +227,27 @@
       </section>
       <!-- /Account -->
 
-        <section id="explore" class="flex items-center">
+        <section id="explore" class="flex items-center my-5">
             <div class="header--text w-full md:w-1/2">
-                <p class="explore--name text-orange-500 text-3xl font-bold">Explore varieties</p>
-                <h1 class="explore--heading text-gray-800 text-5xl font-bold mb-4">
+                <p class="explore--name text-orange-500 text-lg font-bold">Explore varieties</p>
+                <h1 class="explore--heading text-gray-800 text-4xl font-bold mb-4">
                     Shop for your favorites <br class="md:hidden" /> meal as e dey hot.
                 </h1>
-                <p class="explore--desc text-gray-600 text-lg font-medium">
+                <p class="explore--desc text-gray-600 font-medium">
                     Shop for your favorite meals or drinks <br class="md:hidden" /> and enjoy while doing it.
                 </p>
             </div>
             <img src="./assets/images/Rectangle_1.png" alt="img explore" class="img--explore" />
         </section>
 
-          <!-- Account -->
+          <!-- Checkout -->
             <section id="checkout" class="bg-white my-5">
               <div class="container flex flex-wrap justify-center items-center mx-auto mt-10 md:flex-row-reverse flex-col">
                 <div class="lg:w-2/3 max-w-lg mb-10">
                   <h1 class="text-orange-500 font-bold md:text-justify text-center">Checkout</h1>
                   <h1 class="font-bold text-4xl md:text-justify text-center mt-5">When you done check out <br class="md:hidden" />
                     and get it delivered.</h1>
-                  <h4 class="font-medium md:text-justify text-center mt-5">When you done check out and get it <br class="md:hidden" />
+                  <h4 class="font-medium md:text-justify text-gray-600 text-center mt-5">When you done check out and get it <br class="md:hidden" />
                     delivered with ease.</h4>
                 </div>          
                 <img
@@ -238,7 +257,7 @@
                 />
               </div>
               </section>
-              <!-- /Account -->
+              <!-- /Checkout -->
 
       <!-- footer -->
       <footer class="footer" id="contact">
