@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -8,292 +9,238 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="./assets/styles/output.css" />
 
     <!-- Font Monserrat -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <style>
-      #checkout {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .header--text {
-        font-family: "Montserrat", sans-serif;
-        text-align: center;
-        justify-content: center;
-      }
-
-      .checkout--name {
-        color: #fa4a0c;
-        font-size: 24px;
-        font-weight: 700;
-        margin-bottom: 30px;
-      }
-
-      .checkout--heading {
-        color: #252b42;
-        font-size: 40px;
-        margin-bottom: 30px;
-        font-weight: 700;
-      }
-
-      .checkout--desc {
-        color: #737373;
-        margin-bottom: 30px;
-        font-size: 24px;
-        font-weight: 500;
-      }
-
-      .img--checkout {
-        width: 650px;
-        height: 981px;
-      }
+        #checkout {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .header--text {
+            font-family: "Montserrat", sans-serif;
+            text-align: center;
+            justify-content: center;
+        }
+        
+        .checkout--name {
+            color: #fa4a0c;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        
+        .checkout--heading {
+            color: #252b42;
+            font-size: 40px;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        
+        .checkout--desc {
+            color: #737373;
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: 500;
+        }
+        
+        .img--checkout {
+            width: 650px;
+            height: 981px;
+        }
+        
+        #explore {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .header--text {
+            font-family: "Montserrat", sans-serif;
+            text-align: center;
+            padding: 20px;
+            flex: 1;
+        }
+        
+        .explore--name,
+        .explore--heading,
+        .explore--desc {
+            padding-left: 0;
+        }
+        
+        .img--explore {
+            width: 350px;
+            height: 525px;
+            margin-left: 0;
+        }
+        
+        @media (min-width: 900px) {
+            #explore {
+                flex-direction: row;
+                justify-content: center;
+            }
+            .header--text {
+                text-align: left;
+            }
+            .explore--name,
+            .explore--heading,
+            .explore--desc {
+                padding-left: 100px;
+            }
+            .img--explore {
+                margin-left: 20px;
+            }
+        }
     </style>
-    <style>
-      #explore {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+</head>
 
-      .header--text {
-        font-family: "Montserrat", sans-serif;
-        text-align: center;
-        padding: 20px;
-        flex: 1;
-      }
-
-      .explore--name {
-        color: #fa4a0c;
-        font-size: 24px;
-        font-weight: 700;
-        margin-bottom: 30px;
-      }
-
-      .explore--heading {
-        color: #252b42;
-        font-size: 40px;
-        margin-bottom: 30px;
-        font-weight: 700;
-      }
-
-      .explore--desc {
-        color: #737373;
-        margin-bottom: 30px;
-        font-size: 24px;
-        font-weight: 500;
-      }
-    </style>
-  </head>
-
-  <body class="bg-gray-50">
-    <div class="min-h-[100vh] bg-white mx-auto max-w-lg">
-      <!-- navbar -->
-      <nav class="bg-white">
-        <div class="flex justify-between items-center p-6">
-          <div class="w-[104px]">
-            <img
-              src="./assets/images/logo.png"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <div>
-            <button type="button">
+<body class="bg-gray-50">
+    <div class="bg-white mx-auto">
+        <!-- navbar -->
+        <nav class="bg-white">
+            <div class="flex justify-between items-center p-6">
+                <div class="w-[104px]">
+                    <img src="./assets/images/logo.png" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                    <button type="button">
               <img
                 src="./assets/images/menu.svg"
                 class="w-[20px] h-[20px] object-cover"
               />
             </button>
-          </div>
-        </div>
-      </nav>
-      <!-- /navbar -->
+                </div>
+            </div>
+        </nav>
+        <!-- /navbar -->
 
-      <!-- hero -->
-      <section
-        id="hero"
-        class="bg-gray-50 min-h-[20rem] flex justify-center items-center"
-      >
-        <div class="container mx-auto px-4 py-8">
-          <div class="max-w-md mx-auto text-center">
-            <h2 class="font-bold mt-3 mb-3 text-gray-500">Food App</h2>
-            <h1 class="text-5xl font-bold mb-8 text-gray-800">
-              Why stay hungry <br />
-              when you can order <br />
-              from Bella Onoje
-            </h1>
-            <p class="text-2xl mb-8 text-gray-500">
-              Download the bella onoje's <br />
-              food app now on
-            </p>
-            <div class="flex flex-col items-center space-y-4 mb-8">
-              <button
-                class="bg-primary text-xl text-white font-bold py-2 px-4 rounded-full h-14 w-48"
-              >
+        <!-- hero -->
+        <section id="hero" class="bg-gray-50 min-h-[20rem] flex justify-center items-center">
+            <div class="container mx-auto px-4 py-8">
+                <div class="max-w-md mx-auto text-center">
+                    <h2 class="font-bold mt-3 mb-3 text-gray-500">Food App</h2>
+                    <h1 class="text-5xl font-bold mb-8 text-gray-800">
+                        Why stay hungry <br /> when you can order <br /> from Bella Onoje
+                    </h1>
+                    <p class="text-2xl mb-8 text-gray-500">
+                        Download the bella onoje's <br /> food app now on
+                    </p>
+                    <div class="flex flex-col items-center space-y-4 mb-8">
+                        <button class="bg-primary text-xl text-white font-bold py-2 px-4 rounded-full h-14 w-48">
                 Playstore
               </button>
-              <button
-                class="bg-transparent text-xl text-primary font-bold py-2 px-4 border border-primary rounded-full h-14 w-48"
-              >
+                        <button class="bg-transparent text-xl text-primary font-bold py-2 px-4 border border-primary rounded-full h-14 w-48">
                 App store
               </button>
+                    </div>
+                </div>
+                <div class="image flex justify-center items-center">
+                    <img src="assets/images/Group 53.png" alt="" />
+                </div>
             </div>
-          </div>
-          <div class="image flex justify-center items-center">
-            <img src="assets/images/Group 53.png" alt="" />
-          </div>
-        </div>
-      </section>
-      <!-- /hero -->
-      <div class="flex justify-center items-center mt-5">
-        <h1 class="font-semibold font-montserrat pt-8 text-2xl">
-          How the app works
-        </h1>
-      </div>
-      <div class="w-full bg-divider h-[3px] my-[49px]"></div>
-      <section
-        id="account"
-        class="bg-white min-h-[20rem] flex justify-center items-center mt-5"
-      >
-        <div class="basis-7/12 font-montserrat">
-          <h1
-            class="text-primary font-bold text-center font-montserrat text-2xl"
-          >
-            Create an account
-          </h1>
-          <h1 class="font-bold text-4xl text-center mt-5 font-montserrat">
-            Create/login to an existing account to get started
-          </h1>
-          <h4 class="font-medium text-center text-2xl mt-5 text-gray-400">
-            Shop for your favorite meals or drinks and enjoy while doing it.
-          </h4>
-          <img
-            src="./assets/images/Rectangle.png"
-            class="object-cover mt-5"
-            alt=""
-          />
-        </div>
-      </section>
-
-      <section id="explore" class="bg-gray-100 py-8">
-        <div class="container mx-auto flex flex-col items-center">
-          <div class="header--text text-center mb-8">
-            <p class="explore--name text-lg font-semibold text-gray-700">
-              Explore varieties
-            </p>
-            <h1
-              class="explore--heading text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
-            >
-              Shop for your <br class="hidden md:inline" />
-              favorites meal <br class="hidden md:inline" />
-              as e dey hot.
+        </section>
+        <!-- /hero -->
+        <div class="flex justify-center items-center mt-5">
+            <h1 class="font-semibold font-montserrat pt-8 text-2xl">
+                How the app works
             </h1>
-            <p class="explore--desc text-base text-gray-600">
-              Shop for your <br class="hidden md:inline" />favorite meals or
-              <br class="hidden md:inline" />drinks and enjoy
-              <br class="hidden md:inline" />while doing it.
-            </p>
-          </div>
-          <img
-            src="./assets/images/Rectangle_1.png"
-            class="object-cover mt-5"
-            alt=""
-          />
         </div>
-      </section>
+        <div class="w-full bg-divider h-[3px] my-[49px]"></div>
+        <section id="account" class="bg-white min-h-[20rem] flex justify-center items-center mt-5">
+            <div class="basis-7/12 font-montserrat">
+                <h1 class="text-primary font-bold text-center font-montserrat text-2xl">
+                    Create an account
+                </h1>
+                <h1 class="font-bold text-4xl text-center mt-5 font-montserrat">
+                    Create/login to an existing account to get started
+                </h1>
+                <h4 class="font-medium text-center text-2xl mt-5 text-gray-400">
+                    Shop for your favorite meals or drinks and enjoy while doing it.
+                </h4>
+                <img src="./assets/images/Rectangle.png" class="object-cover mt-5" alt="" />
+            </div>
+        </section>
 
-      <section
-        id="checkout"
-        class="bg-gray-50 min-h-[20rem] flex justify-center items-center"
-      >
-        <div class="container mx-auto flex flex-col items-center">
-          <div class="header--text text-center mb-8">
-            <p class="checkout--name text-lg font-semibold text-gray-700 pt-12">
-              Checkout
-            </p>
-            <h1
-              class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
-            >
-              When you <br class="hidden md:inline" />
-              done check
-              <br class="hidden md:inline" />
-              out and get it <br class="hidden md:inline" />
-              delivered.
-            </h1>
-            <p class="checkout--desc text-base text-gray-600">
-              When you done <br class="hidden md:inline" />
-              check out and get it <br class="hidden md:inline" />delivered with
-              ease.
-            </p>
-          </div>
+        <section id="explore" class="flex items-center">
+            <div class="header--text w-full md:w-1/2">
+                <p class="explore--name text-orange-500 text-3xl font-bold">Explore varieties</p>
+                <h1 class="explore--heading text-gray-800 text-5xl font-bold mb-4">
+                    Shop for your favorites <br class="md:hidden" /> meal as e dey hot.
+                </h1>
+                <p class="explore--desc text-gray-600 text-lg font-medium">
+                    Shop for your favorite meals or drinks <br class="md:hidden" /> and enjoy while doing it.
+                </p>
+            </div>
+            <img src="./assets/images/Rectangle_1.png" alt="img explore" class="img--explore" />
+        </section>
 
-          <img
-            src="./assets/images/checkout.png"
-            class="object-cover mb-16"
-            alt=""
-          />
-        </div>
-      </section>
 
-      <!-- footer -->
-      <footer class="">
-        <div
-          class="bg-dark text-center flex flex-col gap-6 px-10 py-28 text-white"
-        >
-          <h1 class="text-5xl font-monts font-bold">Download the app now.</h1>
-          <div class="px-11 mb-11">
-            <h4 class="text-3xl font-mont text-gray-400">
-              Most calendars are designed for teams.
-            </h4>
-          </div>
-          <div class="flex justify-center items-center gap-3">
-            <button
-              type="button"
-              class="bg-primary px-12 py-4 rounded-xl font-monts font-bold"
-            >
+        <section id="checkout" class="bg-gray-50 min-h-[20rem] flex justify-center items-center">
+            <div class="container mx-auto flex flex-col items-center">
+                <div class="header--text text-center mb-8">
+                    <p class="checkout--name text-lg font-semibold text-gray-700 pt-12">
+                        Checkout
+                    </p>
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                        When you <br class="hidden md:inline" /> done check
+                        <br class="hidden md:inline" /> out and get it <br class="hidden md:inline" /> delivered.
+                    </h1>
+                    <p class="checkout--desc text-base text-gray-600">
+                        When you done <br class="hidden md:inline" /> check out and get it <br class="hidden md:inline" />delivered with ease.
+                    </p>
+                </div>
+
+                <img src="./assets/images/checkout.png" class="object-cover mb-16" alt="" />
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="">
+            <div class="bg-dark text-center flex flex-col gap-6 px-10 py-28 text-white">
+                <h1 class="text-5xl font-monts font-bold">Download the app now.</h1>
+                <div class="px-11 mb-11">
+                    <h4 class="text-3xl font-mont text-gray-400">
+                        Most calendars are designed for teams.
+                    </h4>
+                </div>
+                <div class="flex justify-center items-center gap-3">
+                    <button type="button" class="bg-primary px-12 py-4 rounded-xl font-monts font-bold">
               Buy Now
             </button>
-            <button
-              type="button"
-              class="bg-transparent px-12 py-4 border border-white rounded-xl font-monts font-bold"
-            >
+                    <button type="button" class="bg-transparent px-12 py-4 border border-white rounded-xl font-monts font-bold">
               Try for free
             </button>
-          </div>
-        </div>
-        <div class="flex justify-center items-center gap-3 pt-16">
-          <div class="h-10 w-10">
-            <a href="https://twitter.com/">
-              <img src="./assets/images/twitter.png" alt="" />
-            </a>
-          </div>
-          <div class="h-10 w-10">
-            <a href="https://facebook.com/">
-              <img src="./assets/images/facebook.png" alt="" />
-            </a>
-          </div>
-          <div class="h-10 w-10">
-            <a href="https://www.linkedin.com/">
-              <img src="./assets/images/linkedin.png" alt="" />
-            </a>
-          </div>
-        </div>
-        <div class="flex justify-center items-center pt-2 mb-11 text-gray-500">
-          <p class="font-semibold">Just type what's on your mind and we'll</p>
-        </div>
-      </footer>
-      <!-- /footer -->
+                </div>
+            </div>
+            <div class="flex justify-center items-center gap-3 pt-16">
+                <div class="h-10 w-10">
+                    <a href="https://twitter.com/">
+                        <img src="./assets/images/twitter.png" alt="" />
+                    </a>
+                </div>
+                <div class="h-10 w-10">
+                    <a href="https://facebook.com/">
+                        <img src="./assets/images/facebook.png" alt="" />
+                    </a>
+                </div>
+                <div class="h-10 w-10">
+                    <a href="https://www.linkedin.com/">
+                        <img src="./assets/images/linkedin.png" alt="" />
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center items-center pt-2 mb-11 text-gray-500">
+                <p class="font-semibold">Just type what's on your mind and we'll</p>
+            </div>
+        </footer>
+        <!-- /footer -->
     </div>
     <script src="./app.js"></script>
-  </body>
+</body>
+
 </html>
