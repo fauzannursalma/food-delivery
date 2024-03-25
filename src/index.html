@@ -15,6 +15,9 @@
 
     <link rel="stylesheet" href="./assets/styles/output.css" />
 
+    <!-- Feather Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
     <!-- Font Monserrat -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
@@ -97,17 +100,33 @@
   </head>
 
   <body class="bg-gray-50">
-    <div class="min-h-[100vh] bg-white mx-auto max-w-lg">
+    <div class="min-h-[100vh] bg-white mx-auto">
       <!-- navbar -->
       <nav class="bg-white">
-        <div class="flex justify-between items-center p-6">
-          <div class="w-[104px]">
+        <div class="flex justify-between items-center p-6 lg:p-3 lg:mx-10">
+          <div class="w-[104px] lg:w-[200px]">
             <img
               src="./assets/images/logo.png"
               class="w-full h-full object-cover"
             />
           </div>
-          <div>
+          <div class="hidden md:block">
+            <ul class="flex gap-10 lg:gap-24 font-semibold">
+              <li class="nav-item active:text-primary">
+                <a href="#home">Home</a>
+              </li>
+              <li class="nav-item active:text-primary">
+                <a href="#product">Product</a>
+              </li>
+              <li class="nav-item active:text-primary">
+                <a href="#faq">FAQ</a>
+              </li>
+              <li class="nav-item active:text-primary">
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="toggler md:hidden">
             <button type="button">
               <img
                 src="./assets/images/menu.svg"
@@ -115,6 +134,40 @@
               />
             </button>
           </div>
+          <aside
+            id="offcanvas"
+            class="fixed inset-y-0 right-0 bg-[#FFF] w-80 p-4 z-10 hidden lg:hidden"
+          >
+            <nav>
+              <div
+                class="flex justify-between items-center mb-4 p-4 border-b-2 border-gray-300"
+              >
+                <div class="w-[100px]">
+                  <img
+                    src="./assets/images/logo.png"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <div class="leading-none toggler">
+                  <button type="button" class="text-gray-500">
+                    <i data-feather="x-circle"></i>
+                  </button>
+                </div>
+              </div>
+              <ul
+                class="flex flex-col justify-center items-start gap-8 text-sm mt-8"
+              >
+                <li class="nav-item"><a href="#home">Home</a></li>
+                <li class="nav-item"><a href="#product">Product</a></li>
+                <li class="nav-item"><a href="#faq">FAQ</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+          </aside>
+          <div
+            id="overlay"
+            class="fixed inset-0 bg-black opacity-40 hidden lg:hidden"
+          ></div>
         </div>
       </nav>
       <!-- /navbar -->
@@ -246,7 +299,7 @@
       </section>
 
       <!-- footer -->
-      <footer class="">
+      <footer class="footer" id="contact">
         <div
           class="bg-dark text-center flex flex-col gap-6 px-10 py-28 text-white"
         >
@@ -294,6 +347,19 @@
       </footer>
       <!-- /footer -->
     </div>
+    <script>
+      feather.replace();
+    </script>
+    <script>
+      let navToggler = document.getElementsByClassName("toggler");
+
+      for (let i = 0; i < navToggler.length; i++) {
+        navToggler[i].addEventListener("click", function () {
+          document.getElementById("offcanvas").classList.toggle("hidden");
+          document.getElementById("overlay").classList.toggle("hidden");
+        });
+      }
+    </script>
     <script src="./app.js"></script>
   </body>
 </html>
